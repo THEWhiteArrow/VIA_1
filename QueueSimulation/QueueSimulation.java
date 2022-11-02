@@ -1,3 +1,4 @@
+// made by Damian Trafiałek
 package QueueSimulation;
 
 import java.util.*;
