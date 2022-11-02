@@ -6,7 +6,13 @@ public class QueueSimulation
 {
   public int simulate(ArrayList<Integer> input)
   {
-    // TODO Insert your method here and update the return statement
-    return 42;
+    while (input.size()!=1)
+    {
+      input.remove(0);
+      input.add(input.get(0));
+      input.remove(0);
+    }
+    return input.get(0);
   }
+
 }
