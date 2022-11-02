@@ -4,17 +4,37 @@ import java.util.ArrayList;
 
 public class QueueTest
 {
+  public static int log2(int x){
+    return (int)(Math.log(x)/Math.log(2));
+  }
   public static void testAll()
   {
     //clearTerminal();
-    test1();
-    test2();
-    test3();
-    test1024();
-    test513();
-    test100();
+    for(int i=1;i<=40;++i){
+
+      System.out.println(test(i) +" | "+ lol(i));
+    }
+
+
+
+//    test1();
+//    test2();
+//    test3();
+//    test1024();
+//    test513();
+//    test100();
   }
 
+  public static int lol(int x){
+    int ans = (int) (2*( x-Math.pow(2,log2(x)) ));
+    return ans==0 ? x : ans;
+  }
+  public static String test(int x){
+    ArrayList<Integer> list = new ArrayList<>();
+    for (int i=1;i<=x;++i)
+      list.add(i);
+    return x+":"+ new QueueSimulation().simulate(list);
+  }
   public static void test1()
   {
     int[] input = {1, 2, 3, 4, 5};
