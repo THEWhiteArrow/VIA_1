@@ -22,13 +22,28 @@ public class QueueSimulation
     int ans = (int) (2*( n-Math.pow(2,log2(n)) )); //5+ log( log(n) )
     return ans==0 ? n : ans; //2
   }
-  public int simulate(ArrayList<Integer> input)
-  {
-    //return the array item on magic(input.size()-1) index -> magic functions returns indexes from 1 and not 0 like in arrayList start
-    // time complexity 1+1+log(log(n)) ~~ O( log(log(n)) )
 
-    return input.get( magic(input.size()-1));//1
-    // O( log(log(N)) ) - easy google internship
+  public int simulate(ArrayList<Integer> input){
+    //    //return the array item on magic(input.size()-1) index -> magic functions returns indexes from 1 and not 0 like in arrayList start
+    //    // time complexity 1+1+log(log(n)) ~~ O( log(log(n)) )
+    //
+    return input.get( magic(input.size())-1   );//1
+    //    // O( log(log(N)) ) - easy google internship
+  }
+
+  //helper function created to help me figure out the loglogn function
+  public int simulate2(ArrayList<Integer> input)
+  {
+
+    Queue<Integer> Q = new LinkedList<>();
+    for(Integer el : input)
+      Q.add(el);
+
+    while(Q.size()!=1){
+      Q.poll();
+      Q.add(Q.poll());
+    }
+    return Q.peek();
   }
 
 }

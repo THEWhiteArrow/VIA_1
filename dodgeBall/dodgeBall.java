@@ -32,10 +32,10 @@ public class dodgeBall
     int ceiling = Integer.MAX_VALUE; //2
     int floor = Integer.MIN_VALUE; //2
 
-    if(bst.ceiling(x)!=null) ceiling=bbst.ceiling(x);
+    if(bbst.ceiling(x)!=null) ceiling=bbst.ceiling(x);
       //2+2log(x) - find the first higher or the same value elemet in bbst | if its null it has a value given by default
 
-    if(bst.floor(x)!=null) floor=bbst.floor(x); //2+2log(x)
+    if(bbst.floor(x)!=null) floor=bbst.floor(x); //2+2log(x)
     //2+2log(x) - find the first lower or the same value element in the bbst | if its null it has a value given by default
 
     //initialise the distance as a min value of between the closest higher and lower elemets
