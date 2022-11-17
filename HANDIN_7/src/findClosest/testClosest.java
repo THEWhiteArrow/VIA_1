@@ -1,6 +1,6 @@
 package findClosest;
 
-import src.findClosest.closest;
+import findClosest.closest;
 
 import java.util.ArrayList;
 
