@@ -1,4 +1,4 @@
-package src.findClosest;
+package findClosest;
 
 import java.util.*;
 
