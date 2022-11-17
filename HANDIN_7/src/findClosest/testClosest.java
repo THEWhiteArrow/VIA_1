@@ -1,5 +1,7 @@
 package findClosest;
 
+import src.findClosest.closest;
+
 import java.util.ArrayList;
 
 public class testClosest
